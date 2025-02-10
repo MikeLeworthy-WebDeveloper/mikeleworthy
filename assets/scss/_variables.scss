@@ -1,0 +1,21 @@
+// variables
+
+// colours
+$black:							#000000;
+$light-black:					#5A5252;
+$white:							#ffffff;
+$cool:							#F9F9F9;
+$blue:							#3B3B53;
+$light-blue:					#82A5B8;
+$pink:							#FDCCC5;
+
+
+// hover
+//$a-tag-hover-color: 			#E84926;
+$a-tag-hover-transition: 		.2s color ease-in-out, .2s opacity ease-in-out;
+$background-hover-transition: 	.2s background-color ease-in-out;
+
+// transitions
+$transition: 					.25s visibilty ease-in-out, .25s opacity ease-in-out;
+$transition-nav: 				.50s all ease-in-out;
+$bezier: 						600ms cubic-bezier(0.6, 0, 0, 1);

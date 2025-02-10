@@ -1,0 +1,354 @@
+@import "grid";
+@import "variables";
+@import "reset";
+@import "mixins";
+@import "typography";
+@import "navigation";
+
+// -- body start
+
+body {
+	background-color: $blue;
+}
+
+/* ------------------------ */
+/* HEADINGS
+/* ------------------------ */
+h2 {
+	color: $cool;
+	margin-bottom: 25px;
+}
+p a {
+	color: $pink;
+	text-decoration: underline;
+}
+
+/* ------------------------ */
+/* HEADER
+/* ------------------------ */
+header {
+	position: relative;
+	padding-top: 25px;
+	margin-bottom: 25px;
+	z-index: 3;
+}
+header img.main-logo {
+	height: 31px;
+	width: 182px;
+}
+
+/* ------------------------ */
+/* BUTTONS
+/* ------------------------ */
+.cta-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	width: 200px;
+	padding-top: 3px;
+	border: 1px solid $cool;
+	border-radius: 50px;
+	color: $cool;
+}
+.cta-button-alt {
+	border: 1px solid $cool;
+	background-color: $cool;
+	color: $blue;
+}
+.cta-button-all {
+	display: flex;
+}
+.single-projects .cta-button-all {
+	display: none;
+}
+.cta-button-project {
+	display: none;
+}
+.single-projects .cta-button-project {
+	display: flex;
+}
+
+/* ------------------------ */
+/* HEADING CONTENT BLOCKS
+/* ------------------------ */
+.heading-content {
+	color: $cool;
+	text-align: left;
+	margin: 50px 0;
+	p {
+		margin: 0;
+	}
+	@include breakpoint(medium) {
+		text-align: center;
+	}
+	@include breakpoint(large) {
+		margin: 100px 0;
+	}
+}
+
+/* ------------------------------------------ */
+/* SLIDER HOME PAGE
+/* ------------------------------------------ */
+.swiper-container-project-home {
+	height: 545px;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+}
+.swiper-container-project-home .project-attributes-container {
+    position: absolute;
+    bottom: 0;
+	left: 0;
+    width: 100%;
+}
+.swiper-container-project-home .project-title {
+	position: relative;
+	left: 25px;
+	bottom: 25px;
+	margin-bottom: 12px;
+	color: $cool;
+	mix-blend-mode: difference;
+	@include breakpoint(large) {
+		position: absolute;
+	}
+}
+.swiper-container-project-home .project-link {
+	position: relative;
+	left: 25px;
+	bottom: 25px;
+	@include breakpoint(large) {
+		position: absolute;
+		right: 25px;
+		left: auto;
+	}
+}
+
+/* ------------------------------------------ */
+/* SLIDER HOME PAGE INDIVIDUAL PROJECTS
+/* ------------------------------------------ */
+.swiper-container-project-home-individual {
+	height: 100%;
+    overflow-x: hidden;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 325px;
+        border-radius: 25px;
+        margin-bottom: 25px;
+    }
+	@include breakpoint(large) {
+		height: auto;
+	}
+}
+.swiper-container-project-home-individual .project-title {
+	color: $cool;
+	margin-bottom: 25px;
+}
+
+/* ------------------------------------------ */
+/* SLIDER FOR PROJECTS PAGE
+/* ------------------------------------------ */
+.slider-container {
+	position: relative;
+	margin-bottom: 50px;
+}
+.swiper-container-project {
+    height: 300px;
+    overflow: hidden;
+    margin: 25px 0;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+	@include breakpoint(large) {
+		height: 545px;
+	}
+}
+.swiper-slide {
+	position: relative;
+    height: auto;
+    width: 80%;
+}
+.slider-container:nth-child(even) .swiper-slide:nth-child(1n) {
+  	width: 80%;
+}
+.slider-container:nth-child(even) .swiper-slide:nth-child(2n) {
+  	width: 40%;
+}
+.slider-container:nth-child(even) .swiper-slide:nth-child(3n) {
+  	width: 100%;
+}
+
+.slider-container:nth-child(odd) .swiper-slide:nth-child(1n) {
+  	width: 40%;
+}
+.slider-container:nth-child(odd) .swiper-slide:nth-child(2n) {
+  	width: 100%;
+}
+.slider-container:nth-child(odd) .swiper-slide:nth-child(3n) {
+  	width: 80%;
+}
+.slider-container:nth-child(odd) .swiper-slide:nth-child(4n) {
+  	width: 40%;
+}
+.slider-container .project-attributes-container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	@include breakpoint(large) {
+		flex-direction: row;
+	}
+}
+.slider-container .project-title {
+	color: $cool;
+	margin-bottom: 25px;
+	@include breakpoint(large) {
+		margin-bottom: 0;
+	}
+}
+
+/* ------------------------------------------ */
+/* FULL WIDTH IMAGE
+/* ------------------------------------------ */
+.full-width-image {
+	width: 100%;
+    height: 300px;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+	@include breakpoint(large) {
+		height: 100%;
+	}
+	.grid-container,
+	.grid-x,
+	.cell {
+		height: 100%;
+	}
+}
+
+.page-about .full-width-image img,
+.page-contact .full-width-image img {
+	@include breakpoint(large) {
+		height: 700px;
+	}
+}
+
+/* ------------------------------------------ */
+/* TEXT CONTENT
+/* ------------------------------------------ */
+.text-content {
+	width: 100%;
+    margin: 50px 0;
+    h2 {
+    	color: $pink;
+    }
+    p {
+    	color: $cool;
+    	&:last-child {
+    		margin-bottom: 0;
+    	}
+    }
+	@include breakpoint(large) {
+		margin: 100px 0;
+	}
+}
+.text-content .cta-button {
+	margin-top: 25px;
+	@include breakpoint(large) {
+		margin-top: 0;
+	}
+}
+
+/* ------------------------------------------ */
+/* CONTACT
+/* ------------------------------------------ */
+.page-contact .cta-button {
+	display: none;
+}
+
+/* ------------------------------------------ */
+/* PROJECTS
+/* ------------------------------------------ */
+.project-post-top-content .project-post-title {
+	width: 100%;
+	margin: 25px 0;
+	color: $cool;
+	text-align: center;
+}
+.project-post-top-content .full-width-image {
+	height: 545px;
+}
+.tag-area {
+	display: flex;
+	flex-direction: column;
+	@include breakpoint(large) {
+		align-items: flex-end;
+	}
+}
+.tags {
+	margin-top: 25px;
+	@include breakpoint(large) {
+		margin-top: 0;
+	}
+}
+.tags ul {
+	display: flex;
+	flex-flow: row wrap;
+	@include breakpoint(large) {
+		justify-content: flex-end;
+	}
+}
+.tags li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	width: calc(200px - 25px);
+	padding-top: 3px;
+	border: 1px solid $pink;
+	border-radius: 50px;
+	color: $pink;
+	margin-bottom: 25px;
+	margin-right: 25px;
+	@include breakpoint(large) {
+		flex-basis: calc(200px - 50px);
+		margin-right: 0;
+		margin-left: 25px;
+		width: 200px;
+	}
+}
+
+/* ------------------------------------------ */
+/* FOOTER
+/* ------------------------------------------ */
+footer {
+	margin: 100px 0 25px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	@include breakpoint(large) {
+		margin: 100px 0 25px 0;
+	}
+}
+footer img {
+	height: 68px;
+	width: 150px;
+}
+footer a {
+	color: $cool;
+}
+
+
+
+

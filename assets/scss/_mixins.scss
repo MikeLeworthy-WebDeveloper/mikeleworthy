@@ -1,0 +1,56 @@
+// mixins
+@mixin type_lead($size,$leading,$letterspacing:false) {
+	font-size: $size * 1px;
+	line-height: calc(#{$leading}/#{$size});
+	@if $letterspacing != false {
+		letter-spacing: ($letterspacing / 1000) * 1em;
+	}
+}
+
+// YRT Ginxa Loop
+@font-face {
+  font-family: 'YRT Ginza Loop';
+  src:  url('../fonts/YRTGinzaLoop/YRTGinzaLoop.woff2') format('woff2'),
+        url('../fonts/YRTGinzaLoop/YRTGinzaLoop.woff') format('woff');
+        font-display: fallback;
+}
+@mixin font_YRTGinzaLoop {
+	font-family: "YRT Ginza Loop", sans-serif;
+	font-style: normal;
+	font-display: fallback;
+}
+
+// Geomanist
+@font-face {
+  font-family: 'Geomanist Light';
+  src:  url('../fonts/Geomanist/Geomanist-Light.woff2') format('woff2'),
+        url('../fonts/Geomanist/Geomanist-Light.woff') format('woff');
+        font-display: fallback;
+}
+@font-face {
+  font-family: 'Geomanist Medium';
+  src:  url('../fonts/Geomanist/Geomanist-Medium.woff2') format('woff2'),
+        url('../fonts/Geomanist/Geomanist-Medium.woff') format('woff');
+        font-display: fallback;
+}
+@font-face {
+  font-family: 'Geomanist Book';
+  src:  url('../fonts/Geomanist/Geomanist-Book.woff2') format('woff2'),
+        url('../fonts/Geomanist/Geomanist-Book.woff') format('woff');
+        font-display: fallback;
+}
+@mixin font_Geomanist_Light {
+	font-family: "Geomanist Light", sans-serif;
+	font-style: normal;
+	font-display: fallback;
+}
+@mixin font_Geomanist_Medium{
+	font-family: "Geomanist Medium", sans-serif;
+	font-style: normal;
+	font-display: fallback;
+}
+@mixin font_Geomanist_Book {
+	font-family: "Geomanist Book", sans-serif;
+	font-style: normal;
+	font-display: fallback;
+}

@@ -1,0 +1,57 @@
+// typography
+
+h2 {
+	@include font_Geomanist_Book;
+	@include type_lead(27,35,0);
+	@include breakpoint(large) {
+		@include type_lead(40,50,0);
+	}
+}
+p {
+	@include font_Geomanist_Light;
+	@include type_lead(22,30,0);
+}
+strong, b {
+	@include font_Geomanist_Book;
+}
+.cta-button {
+	@include font_Geomanist_Light;
+	@include type_lead(20,20,0);
+}
+.tag-area li {
+	@include font_Geomanist_Light;
+	@include type_lead(16,16,0);
+}
+.heading-content p {
+	@include font_Geomanist_Light;
+	@include type_lead(30,40,0);
+	@include breakpoint(large) {
+		@include type_lead(40,50,0);
+	}
+}
+header .menu-main-navigation-container a {
+	@include font_Geomanist_Book;
+	@include type_lead(20,20,30);
+}
+.navigation-container a {
+	@include font_Geomanist_Light;
+	@include type_lead(40,60,0);
+}
+.navigation-container-inner:last-child a {
+	@include font_Geomanist_Light;
+	@include type_lead(22,30,0);
+}
+.project-title {
+	@include font_Geomanist_Book;
+	@include type_lead(20,20,0);
+}
+.project-post-top-content .project-post-title {
+	@include font_Geomanist_Light;
+	@include type_lead(30,40,0);
+	@include breakpoint(large) {
+		@include type_lead(40,50,0);
+	}
+}
+footer a {
+	@include type_lead(12,12,0);
+}

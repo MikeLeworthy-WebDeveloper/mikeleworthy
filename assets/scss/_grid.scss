@@ -1,0 +1,127 @@
+// the toggle button for the grid overlay
+#grid-toggle {
+	position: fixed;
+	z-index: 3000;
+	right: 5px;
+	bottom: 5px;
+	width: 15px;
+	height: 20px;
+	border-left: 3px solid;
+	border-right: 3px solid;
+	color: $black;
+	cursor: pointer;
+	opacity: 0.2;
+	transition: all 250ms ease-in-out;
+	background: none;
+	outline: none;
+	&.active {
+		border-width: 5px;
+	}
+	&:hover {
+		border-width: 5px;
+		opacity: 1;
+	}
+}
+.cell {
+	@include breakpoint(small) {
+		padding: 0 12px;
+	}
+	@include breakpoint(medium) {
+		padding: 0 12px;
+	}
+	@include breakpoint(xlarge) {
+		padding: 0 12px;
+	}
+}
+// the grid overlay
+#grid {
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	transition: opacity 1000ms ease-in-out;	
+	overflow: hidden;
+	opacity: 0;
+	z-index: 3000;
+	&.active {
+		height: 100vh;
+		opacity: 1;
+	}
+	.cell {
+		height: 100vh;
+		background: rgba(cyan, .3);
+		border-top: 0;
+		border-bottom:  0;
+		//margin: 0 50px;
+		@include breakpoint(small) {
+			margin: 0 12px;
+		}
+		@include breakpoint(medium) {
+			margin: 0 12px;
+		}
+		@include breakpoint(xlarge) {
+			margin: 0 12px;
+		}
+	}
+}
+.grid-container {
+    padding-right: 0;
+    padding-left: 0;
+    @include breakpoint(small) {
+	    margin: 0 12px;
+    }
+    @include breakpoint(medium) {
+	   margin: 0 12px
+    }
+    @include breakpoint(large) {
+	   max-width: 100%;
+	   margin: 0 12px
+    }
+    &.fluid {
+    	padding: 0;
+    	height: 100%;
+    }
+    .grid-x.grid-margin-x {
+    	height: 100%;
+    }
+}
+// dev slither - what screen am I on?
+.dev-slither {
+	position: fixed;
+	top: 25px;
+	width: 115px;
+	font-size: 10px;
+	text-align: center;
+	padding: 2px 5px;
+	color: $black;
+	background-color: $white;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
+}
+.dev-slither.show-for-small-only,
+.dev-slither.show-for-medium.hide-for-large,
+.dev-slither.show-for-large.hide-for-xlarge,
+.dev-slither.show-for-xlarge.hide-for-xxlarge,
+.dev-slither.show-for-xxlarge.hide-for-xxxlarge,
+.dev-slither.show-for-xxxlarge {
+	color: black;
+	right: 0;
+	transition: margin-right .25s ease-in-out;
+	margin-right: -150px;
+}
+html.tabs-visible .dev-slither.show-for-small-only,
+html.tabs-visible .dev-slither.show-for-medium.hide-for-large,
+html.tabs-visible .dev-slither.show-for-large.hide-for-xlarge,
+html.tabs-visible .dev-slither.show-for-xlarge.hide-for-xxlarge,
+html.tabs-visible .dev-slither.show-for-xxlarge.hide-for-xxxlarge,
+html.tabs-visible .dev-slither.show-for-xxxlarge {
+	transition:  margin-right .5s ease-in-out;
+	margin-right: 0;
+}
+.grid-container.fluid {
+	margin: 0;
+	padding: 0;
+}
